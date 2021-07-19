@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Dados do Aluno</title>
+	<style>
+		.quebra{
+			display: block;
+		}
+		
+		.espaco{
+			margin-bottom: 15px;
+
+		}
+		.filter{
+			border: 1px solid #000;	
+		}
+
+		.show{
+			opacity: 0;
+			transition: 1s;
+		}
+		.invisivel{
+			display: none;
+		}	
+		select{
+			display: block;
+		}
+		
+		form{
+			border: 1px solid #000;
+			padding: 10px;
+			border-radius: 15px;
+			background-color: lightblue;
+		}
+		div{
+			display: flex;
+		}
+		h2{
+			text-align: center;
+		}
+
+
+		tbody{color:black}
+		tbody{text-align: center}
+		table{margin:70px auto}
+		tfoot{color: #800}
+		tfoot{text-align: center}
+		table, th, td{border: 1px solid #000}
+		table{border-collapse: collapse}
+		table {
+ 				width: 100%;
+			}
+		
+	</style>
+</head>
+<body>
+	<h2 class="titulo-p">Dados do Aluno</h2>
+	<form  id="media" method="post"  >
+		<label>Nome:</label>
+		<input id="nome" class="quebra espaco" type="text" name="nome" maxlength="20" size="30">
+		<label>Nota 1:</label>
+		<input id="nota1"  class="quebra espaco" name="nota1" type="number" maxlength="20" size="30">
+		<label>Nota 2:</label>
+		<input id="nota2"  class="quebra espaco" name="nota2" type="number" size="30">
+		<label>Nota 3:</label>
+		<input id="nota3"  class="quebra espaco" name="nota3" type="number" size="30">
+
+
+		<div>
+			<input class="espaco" id="enviar-dados" type="submit" name="enviar" value="Enviar dados">
+		</div>
+		
+	</form>
+
+	<table id="tabela">
+		<thead>
+			<h2>Tabela de Alunos</h2>
+			<label for="filtrar">Filtrar Alunos: </label>
+			<input class="filter" type="text" name="filtro" id="filtrar" placeholder="DIGITE O NOME DO ALUNO" maxlength="40" size="60">
+		    <tr>
+		    	<th style="background-color: red;">Nome</th>
+		        <th style="background-color: orange;">Nota1</th>
+		        <th style="background-color: blue;">Nota2</th>
+		        <th style="background-color: pink;">Nota3</th>
+		        <th style="background-color: yellow;">Média</th>
+		        <th style="background-color: green;">Situação</th>		        
+		    </tr>
+		 </thead>
+		 <tbody id="tabela-alunos">
+
+		    <tr class="aluno" id="primeiro-aluno" >
+		        	<td class="inf-nome">Bruno</td>
+		        	<td class="inf-nota1">10</td>
+		        	<td class="inf-nota2">10</td>
+		        	<td class="inf-nota3">10</td>
+		        	<td class="inf-media">10.00</td>
+		        	<td class="inf-situacao">Aprovado</td>	        		    
+		    </tr>
+
+		</tbody>
+	</table>
+	<script type="text/javascript" src="principal.js" >
+		
+	</script>
+</body>
+</html>
+
